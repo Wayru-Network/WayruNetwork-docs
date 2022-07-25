@@ -1,6 +1,7 @@
 export default {
     title: 'Wayru Network Docs',
     description: 'Wayru Network Docs',
+    base: "/WayruNetwork-docs/",
     themeConfig: {
         sidebar: [
             {
@@ -36,5 +37,11 @@ export default {
     },
     head : [ 
         ["script", {src : "https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"}]
-    ]
+    ],
+    markdown: {
+        config: (md) => {
+          const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+          md.use(demoBlockPlugin)
+        }
+    }
 }
