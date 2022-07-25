@@ -1,8 +1,10 @@
 export default {
     title: 'Wayru Network Docs',
     description: 'Wayru Network Docs',
-    base: "/WayruNetwork-docs/",
+    base: '/WayruNetwork-docs/',
+    lang: 'en-US',
     themeConfig: {
+        search: true,
         sidebar: [
             {
                 text: 'Guide',
