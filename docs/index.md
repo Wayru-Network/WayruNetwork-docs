@@ -2,7 +2,7 @@
 layout: home
 
 title: Wayru Network
-titleTemplate: Docs for the Wayru Network Products
+titleTemplate: Docs for the Wayru Network Ecosystem
 
 hero:
   name: WAYRU NETWORK
