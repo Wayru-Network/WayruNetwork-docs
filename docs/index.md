@@ -13,8 +13,8 @@ hero:
       text: Get Started
       link: /guide/getting-started
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/Wayru-Network
+      text: Check Network Status
+      link: https://status.wayru.co/
 
 features:
   - title: "Vite: The DX that can't be beat"
