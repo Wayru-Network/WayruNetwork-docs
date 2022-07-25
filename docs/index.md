@@ -1,68 +1,28 @@
 ---
 layout: home
 
+title: Wayru Network
+titleTemplate: Docs for the Wayru Network Products
+
 hero:
-  name: VitePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
-  image:
-    src: /logo.png
-    alt: VitePress
+  name: WAYRU NETWORK
+  text:  Powered by YOU
+  tagline: Own a piece of the Internet. Read here all the Docs to start the journey in the Wayru ecosystem.
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/what-is-vitepress
+      link: /guide/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/Wayru-Network
+
+features:
+  - title: "Vite: The DX that can't be beat"
+    details: Feel the speed of Vite. Instant server start and lightning fast HMR that stays fast regardless of the app size.
+  - title: Designed to be simplicity first
+    details: With Markdown-centered content, it's built to help you focus on writing and deployed with minimum configuration.
+  - title: Power of Vue meets Markdown
+    details: Enhance your content with all the features of Vue in Markdown, while being able to customize your site with Vue.
+  - title: Fully static yet still dynamic
+    details: Go wild with true SSG + SPA architecture. Static on page load, but engage users with 100% interactivity from there.
 ---
-
-<template>
-  <div class="main-content">
-    <div v-if="user">
-      <p align="center">
-        Hi {{user.given_name}} {{user.family_name}}, Welcome to the Vuepress Blog
-      </p>
-      <p align="center">
-        <LogoutButton :client="auth0client" />
-      </p>
-    </div>
-    <div v-else>
-      <p align="center">
-        You are currently not logged-in to the Application. Please use the login button below to sign in
-      </p>
-      <p align="center">
-        <LoginButton :client="auth0client" @login-complete="getUser()" />
-      </p>
-    </div>
-  </div>
-
-</template>
-
-<script>
-import auth from "/auth";
-import LoginButton from "vitepress/theme/components/LoginButton"
-import LogoutButton from "vitepress/theme/components/LogoutButton";
-
-export default {
-  data() {
-    return {
-      auth0client : null,
-      user : null
-    }
-  },
-  async mounted(){
-    this.auth0client = await auth.createClient();
-
-    this.user = await this.auth0client.getUser();
-  },
-  methods : {
-    async login () {
-      await auth.loginWithPopup(this.auth0client);
-    },
-    async getUser(){
-      this.user = await this.auth0client.getUser();
-    }
-  }
-}
-</script>

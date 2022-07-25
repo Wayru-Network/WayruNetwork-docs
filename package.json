@@ -10,7 +10,6 @@
   "devDependencies": {
     "@auth0/auth0-spa-js": "^1.18.0",
     "vitepress": "^1.0.0-alpha.4",
-    "vitepress-theme-demoblock": "^1.4.2",
     "vue": "^3.2.37"
   },
   "scripts": {
