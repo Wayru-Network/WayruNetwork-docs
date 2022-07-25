@@ -1,3 +1,3 @@
 # WayruNetwork-docs
 
-[page:](https://docs.wayru.co/)
+[docs](https://docs.wayru.co/)
